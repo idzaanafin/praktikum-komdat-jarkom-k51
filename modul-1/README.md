@@ -87,3 +87,8 @@ Full default Network Configuration:
 
 Setelah menambahkan konfigurasi diatas, seharusnya setiap client bisa terhubung dan setiap client bisa mengakses internet.
 <img width="1917" height="956" alt="image" src="https://github.com/user-attachments/assets/df98fc87-40f8-429c-aac0-e8c4b524c6bd" />
+
+
+
+###14. shortbf
+
