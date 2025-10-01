@@ -190,6 +190,98 @@ DAN YAP! Kita berhasil mendapatkan flagnya yaitu
 flag: KOMJAR25{K3yb0ard_W4rr10r_EMvSlfpJrxonPy9WhDKf3UaaQ}
 
 
+### 16. Melkorplan1
+Pertama kita download folder .zip dan extract. Setelah kita extract kita buka file .pcapng nya di wireshark.
+
+<img width="1890" height="1003" alt="image" src="https://github.com/user-attachments/assets/965d3389-0b8b-4655-9d46-38358bf07528" />
+
+#### Pengerjaan
+Pertama kita filer "user"
+```bash
+frame contains"user"
+```
+
+<img width="1400" height="380" alt="image" src="https://github.com/user-attachments/assets/d034877b-5c42-4f7c-aff8-4882bd6f4db9" />
+
+Setelah itu kita lakukan TCP Stream yang paling atas.
+
+<img width="673" height="831" alt="image" src="https://github.com/user-attachments/assets/e681536f-bd9f-420b-b2aa-7ad7e0fad0c6" />
+
+Nah di sini kita sudah mendapatkan username dan passwordnya yaitu
+- Username: ind@psg420.com
+- Password: {6r_6e#TfT1p
+
+Kemudian kita coba filter "exe"
+```bash
+frame contains"exe"
+```
+<img width="1916" height="560" alt="image" src="https://github.com/user-attachments/assets/acae2180-fb7d-4459-8c3f-8ef068f4be29" />
+
+Nah di sini kita bisa lihat berapa banyak file yang ada yaitu ada 5 ( q,w,e,r,t ). Yang berguna nanti saat kita masukkan ke nc 10.15.43.32 3403
+
+Sekarang kita lanjut ke nc 10.15.43.32 3403
+
+<img width="533" height="220" alt="image" src="https://github.com/user-attachments/assets/49c863e6-09da-4955-bfc3-32fa4ea3aa11" />
+
+Di sini kita diminta memasukkan credentials yang sudah kita temukan tadi yaitu `ind@psg420.com:{6r_6e#TfT1p`
+
+<img width="494" height="233" alt="image" src="https://github.com/user-attachments/assets/98382255-ff7f-4ca5-9886-752530199ccc" />
+
+Nahhhhh karena berhasil, selanjutnya kita diminta untuk memasukkan jumlah file yang berisiko mengandung malware. Karena kita sudah menemukan jumlahnya yaitu 5, tinggal kita masukkan
+
+<img width="466" height="325" alt="image" src="https://github.com/user-attachments/assets/7be2cce9-755e-4873-8d42-bb0038f15f7c" />
+
+Karena sudah berhasil sekarang kita diminta untuk mencari hash dari semua file yang kita temukan tadi (q,w,e,r,t) menggunakan sha256. Di sini kita cari protocol FTP-Data dari setiap file (yang mana aja boleh) dan kita TCP Stream.
+
+<img width="1444" height="818" alt="image" src="https://github.com/user-attachments/assets/1cff9f42-9218-43da-9128-7f1f1f65ace9" />
+
+Setelah kita TCP Stream, kita ubah "view as" nya ke raw
+
+<img width="965" height="210" alt="image" src="https://github.com/user-attachments/assets/c5f6b0b4-47aa-43e4-8ef9-240c3917f5c7" />
+
+Setelah kita ganti ke raw, kita save sesuai nama filenya.
+
+<img width="942" height="587" alt="image" src="https://github.com/user-attachments/assets/5534ff21-7a4f-45b0-ac2a-dcd07384a62a" />
+
+Setelah kita Save as, buka terminal dan gunakan "sha256sum (nama file)"
+
+<img width="634" height="77" alt="image" src="https://github.com/user-attachments/assets/e84d36e5-56d0-4383-b28c-e9f0df2da397" />
+
+Sekarang kita sudah dapat jawabannya untuk hash yang q.exe. yaitu
+`ca34b0926cdc3242bbfad1c4a0b42cc2750d90db9a272d92cfb6cb7034d2a3bd`
+Langsung saja kita masukkan
+
+<img width="609" height="170" alt="image" src="https://github.com/user-attachments/assets/fc118f30-40be-479d-8f25-9f283063003c" />
+
+nahh sudah berhasil. Sekarang kita lakukan hal yang sama ke sisa file nya (w,e,r,t)
+
+<img width="675" height="449" alt="image" src="https://github.com/user-attachments/assets/2f2a00e4-bb1a-465b-bda3-93941ff6600d" />
+
+dan kita masukkan ke dalam nc 10.15.43.32 3403
+
+<img width="866" height="340" alt="image" src="https://github.com/user-attachments/assets/a939c807-b27c-4041-beb7-45a3b588ce9f" />
+
+DAN YAP! kita mendapatkan flagnya yaitu KOMJAR25{Y0u_4r3_4_g00d_4nalyz3r_YYbYFF5ywIKJy37Ajnm8BEZ14}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -219,6 +311,7 @@ flag: KOMJAR25{K3yb0ard_W4rr10r_EMvSlfpJrxonPy9WhDKf3UaaQ}
 
 
    
+
 
 
 
