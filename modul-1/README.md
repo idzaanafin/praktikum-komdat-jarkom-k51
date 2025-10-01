@@ -90,6 +90,15 @@ Setelah menambahkan konfigurasi diatas, seharusnya setiap client bisa terhubung 
 
 
 
-### 14. shortbf
+### 14. SHORTBF
+Pertama kita download folder .zip dan extract. Setelah kita extract kita buka file .pcapng nya di wireshark.
+<img width="1920" height="1013" alt="image" src="https://github.com/user-attachments/assets/2bf57cab-d535-4950-9da9-89e7d8d7a221" />
+
+#### Pengerjaan
+1. Untuk awalan, saya mencoba untuk memfilter dengan kata kunci "user" karena ini adalah serangan brute force yang biasanya ada kata kunci "user" atau "password".
+   ```bash
+   frame contains "user"
+   ```
+
 
 
