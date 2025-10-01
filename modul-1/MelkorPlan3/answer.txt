@@ -1,0 +1,26 @@
+idzoyy@windows:~$ nc 10.15.43.32 3405
+
+===== Soal 18 =====
+Difficulty: Hard
+Note: You can exit anytime by typing 'exit'
+
+How many files are suspected of containing malware?
+Format: int
+> 2
+
+What is the name of the first malicious file?
+Format: file.exe
+> d0p2nc6ka3f_fixhohlycj4ovqfcy_smchzo_ub83urjpphrwahjwhv_o5c0fvf6.exe
+
+Apa nama file berbahaya yang kedua?
+Format: file.exe
+> oiku9bu68cxqenfmcsos2aek6t07_guuisgxhllixv8dx2eemqddnhyh46l8n_di.exe
+
+What is the hash of the first malicious file?
+Format: sha256
+> 59896ae5f3edcb999243c7bfdc0b17eb7fe28f3a66259d797386ea470c010040
+
+What is the hash of the second malicious file?
+Format: sha256
+> cf99990bee6c378cbf56239b3cc88276eec348d82740f84e9d5c343751f82560
+Congratulations! Here is your flag: KOMJAR25{Y0u_4re_g0dl1ke_odMSjkp4Z1p1t0TISwqwhqu3g}

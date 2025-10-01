@@ -1,0 +1,18 @@
+idzoyy@windows:~$ nc 10.15.43.32 3402
+
+===== Soal 15 =====
+Difficulty: Medium
+Note: You can exit anytime by typing 'exit'
+
+What device does Melkor use?
+Format: string
+> Keyboard
+
+What did Melkor write?
+Format: string
+> UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=
+
+What is Melkor's secret message?
+Format: string
+> Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd
+Congratulations! Here is your flag: KOMJAR25{K3yb0ard_W4rr10r_2qmHpIGK5g9Q5wfOIkEE0WBi9}

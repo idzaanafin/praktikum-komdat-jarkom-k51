@@ -62,7 +62,7 @@ def decode_hid_report(report: bytes) -> str:
 
 def main(pcap_path):
     packets = rdpcap(pcap_path)
-    for i, pkt in enumerate(packets, 1):
+    for i, pkt in enumerate(packets[40:], 1):
         print(decode_hid_report(pkt.load[-8:]),end='')
 
 

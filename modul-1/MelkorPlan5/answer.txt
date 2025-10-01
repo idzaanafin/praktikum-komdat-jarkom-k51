@@ -1,0 +1,18 @@
+idzoyy@windows:~$ nc 10.15.43.32 3407
+
+===== Soal 20 =====
+Difficulty: Hard
+Note: You can exit anytime by typing 'exit'
+
+What encryption method is used?
+Format: string
+> TLS
+
+What is the name of the malicious file placed by the attacker?
+Format: file.exe
+> invest_20.dll
+
+What is the hash of the file containing the malware?
+Format: sha256
+> 31cf42b2a7c5c558f44cfc67684cc344c17d4946d3a1e0b2cecb8eb58173cb2f
+Congratulations! Here is your flag: KOMJAR25{B3ware_0f_M4lw4re_l8S44DQDsbTyyjgAfQCbBqeHh}
