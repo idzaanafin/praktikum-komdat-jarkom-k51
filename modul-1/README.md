@@ -95,7 +95,7 @@ Pertama kita download folder .zip dan extract. Setelah kita extract kita buka fi
 <img width="1920" height="1013" alt="image" src="https://github.com/user-attachments/assets/2bf57cab-d535-4950-9da9-89e7d8d7a221" />
 
 #### Pengerjaan
-1. Untuk awalan, saya mencoba untuk memfilter dengan kata kunci "user" karena ini adalah serangan brute force yang biasanya ada kata kunci "user" atau "password".
+   Untuk awalan, saya mencoba untuk memfilter dengan kata kunci "user" karena ini adalah serangan brute force yang biasanya ada kata kunci "user" atau "password".
    ```bash
    frame contains "user"
    ```
@@ -143,6 +143,70 @@ Pertama kita download folder .zip dan extract. Setelah kita extract kita buka fi
 
    KOMJAR25{Brut3_F0rc3_a0uVBelAaiWhDP9i8w5AlTmIt}
 
+### 15. Hiddenmsg
+Pertama kita download folder .zip dan extract. Setelah kita extract kita buka file .pcapng nya di wireshark.
+
+<img width="1901" height="1033" alt="image" src="https://github.com/user-attachments/assets/4743b7fd-bc6a-46e5-8a3d-b3fb99753fdf" />
+
+#### Pengerjaan
+Pertama kita coba filter USB dengan panjang 35 dengan filter
+```bash
+usb.transfer_type == 1 && frame.len == 35
+```
+<img width="1056" height="561" alt="image" src="https://github.com/user-attachments/assets/9e966544-4b2b-4fef-9514-a1147c1e1d10" />
+
+Setelah itu kita export menjadi file .txt dengan cara file->as plain text kemudian beri nama file nya dan uncheck box summary line dan pencet save.
+
+<img width="984" height="759" alt="image" src="https://github.com/user-attachments/assets/a8ba47b8-b45d-41b2-9dc6-9d3ec2a54a9b" />
+
+setelah kita dapet filenya, filenya kita terjemahkan menjadi text. Di sini saya memakai chatGPT untuk memintanya membantu saya menerjemahkan text
+
+<img width="1081" height="379" alt="image" src="https://github.com/user-attachments/assets/2cfd5651-d2c4-4a3c-a1bb-c1c431528989" />
+
+Nahhh ternyata setelah kita terjemahkan kita dapat textnya yaitu `UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=
+`. Setelah dapat textnya, kita decrypt dari base64 ke text.
+
+<img width="828" height="677" alt="image" src="https://github.com/user-attachments/assets/b673f0ef-6b60-4965-b9c1-8eebb8234fee" />
+
+Setelah kita decrypt kita dapat `Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd`
+
+Sekarang kita lanjut memasukkannya ke nc 10.15.43.32 3402
+
+<img width="467" height="150" alt="image" src="https://github.com/user-attachments/assets/a5160875-8ccf-4056-b7a5-83e535441985" />
+
+Di sini kita diminta untuk mencari tahu device apa yang dipakai Melkor. Di sini Melkor memakai Keyboard
+
+<img width="428" height="252" alt="image" src="https://github.com/user-attachments/assets/865a9115-2969-4b39-bf06-0a920e7c1ca1" />
+
+Karena benar sekarang kita diminta untuk mencari tahu apa yang ditulis. di sini kita masukkan terjemahan yang kita masukkan tadi yaitu `UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=`
+
+<img width="490" height="336" alt="image" src="https://github.com/user-attachments/assets/7ddf2800-dd3e-4683-a5f1-3418339e9cc3" />
+
+Di sini benar. Jadi sekarang kita masukkan kata yang sudah di decrypt tadi. yaitu `Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd`
+
+<img width="831" height="340" alt="image" src="https://github.com/user-attachments/assets/e6d16616-42d3-4458-bd73-38608215cdd2" />
+
+DAN YAP! Kita berhasil mendapatkan flagnya yaitu 
+flag: KOMJAR25{K3yb0ard_W4rr10r_EMvSlfpJrxonPy9WhDKf3UaaQ}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -155,6 +219,7 @@ Pertama kita download folder .zip dan extract. Setelah kita extract kita buka fi
 
 
    
+
 
 
 
