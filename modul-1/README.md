@@ -100,15 +100,63 @@ Pertama kita download folder .zip dan extract. Setelah kita extract kita buka fi
    frame contains "user"
    ```
    <img width="1341" height="570" alt="image" src="https://github.com/user-attachments/assets/4ebc29af-4e2f-4a17-9858-94f7113ba3b1" />
+   
    Setelah itu kita coba TCP Stream salah satunya dengan cara *ctrl + alt + shift + T* atau dengan klik kanan->Follow->TCP Stream.
+   
    <img width="459" height="346" alt="image" src="https://github.com/user-attachments/assets/d1cb703e-cd34-4726-b9ad-db5ed9e15eff" />
+   
    nah karena di sini gagal, dan text gagal nya menggunaan bahasa inggris (invalid). Saya mencoba cari kata kunci yang berhasil seperti "success" menggunakan filter
    ```bash
    frame contains "success"
    ```
    <img width="927" height="108" alt="image" src="https://github.com/user-attachments/assets/fde181b2-ea2a-44f4-b3ce-79cb67348f67" />
+   
    ternyata muncul, sekarang kita coba TCP Stream untuk mengecek apakah benar atau salah.
+   
    <img width="1013" height="517" alt="image" src="https://github.com/user-attachments/assets/98b3a0c1-721b-439e-817a-3cffbee311e5" />
+   
+   Nahhhhh di sini berhasil mendapatkan username dan passwordnya. sekarang tinggal kita coba ke nc 10.15.43.32 3401
+
+   <img width="459" height="149" alt="image" src="https://github.com/user-attachments/assets/4231f13f-a336-4932-bd65-6f3eafd21c95" />
+   
+   Kita diminta untuk memasukkan banyaknya paket di file .pcapng ini, kita bisa lihat di kanan bawah wiresharknya
+   
+   <img width="307" height="56" alt="image" src="https://github.com/user-attachments/assets/f2e77686-e62e-4e4c-b6f9-e7ab891f4111" />
+
+   Di sini terlihat kalau total paketnya adalah 500358
+
+   <img width="514" height="226" alt="image" src="https://github.com/user-attachments/assets/80ad4a51-d19c-4293-8a39-77537076b131" />
+
+   Selanjutnya kita diminta untuk memasukkan user dan passwordnya. karena kita udah dapet tadi maka tinggal kita masukkan n1enna:y4v4nn4_k3m3nt4r1
+
+   <img width="466" height="286" alt="image" src="https://github.com/user-attachments/assets/993a0315-5ab9-4b24-a2d2-bb713c09157b" />
+
+   nahh karena user dan passwordnya bener sekarang kita diminta untuk mencari credentials nya di stream mana. ini bisa kita lihat di tempat filter ketika kita melakukan TCP Streamnya. Di mana streamnya adalah 41824.
+
+   <img width="454" height="370" alt="image" src="https://github.com/user-attachments/assets/ac1dcbf0-b64b-4e9d-b8a6-b7ed64d6bfc6" />
+
+   Sekarang kita diminta mencai tools yang dipakai untuk melakukan bruteforce. Ini bisa kita lihat di TCP Stream yang sama pada credentials. dimana tools nya adalah Fuzz Faster U Fool v2.1.0-dev
+
+   <img width="787" height="474" alt="image" src="https://github.com/user-attachments/assets/49c42830-5851-42ab-9116-4d2201211d57" />
+
+   DAN YAP! kita mendapatkan flagnya yaitu
+
+   KOMJAR25{Brut3_F0rc3_a0uVBelAaiWhDP9i8w5AlTmIt}
+
+
+
+
+
+
+   
+
+
+   
+
+
+   
+
+
 
 
 
