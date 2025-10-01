@@ -99,6 +99,21 @@ Pertama kita download folder .zip dan extract. Setelah kita extract kita buka fi
    ```bash
    frame contains "user"
    ```
+   <img width="1341" height="570" alt="image" src="https://github.com/user-attachments/assets/4ebc29af-4e2f-4a17-9858-94f7113ba3b1" />
+   Setelah itu kita coba TCP Stream salah satunya dengan cara *ctrl + alt + shift + T* atau dengan klik kanan->Follow->TCP Stream.
+   <img width="459" height="346" alt="image" src="https://github.com/user-attachments/assets/d1cb703e-cd34-4726-b9ad-db5ed9e15eff" />
+   nah karena di sini gagal, dan text gagal nya menggunaan bahasa inggris (invalid). Saya mencoba cari kata kunci yang berhasil seperti "success" menggunakan filter
+   ```bash
+   frame contains "success"
+   ```
+   <img width="927" height="108" alt="image" src="https://github.com/user-attachments/assets/fde181b2-ea2a-44f4-b3ce-79cb67348f67" />
+   ternyata muncul, sekarang kita coba TCP Stream untuk mengecek apakah benar atau salah.
+   <img width="1013" height="517" alt="image" src="https://github.com/user-attachments/assets/98b3a0c1-721b-439e-817a-3cffbee311e5" />
+
+
+
+
+
 
 
 
